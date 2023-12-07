@@ -2,6 +2,11 @@ package com.agrounds.euler
 
 import kotlin.math.max
 
+// My probably naive attempt to generate a set of all prime numbers up to some limit.
+// It uses the method of the Sieve of Eratosthenes, but does not optimize for the CPU cache,
+// so the runtime bottleneck is likely the memory access speed.  It also runs entirely in a single thread.
+// Regardless, it does eventually find all primes up to a limit of around 1 billion (my best guess), depending on
+// your JVM max heap size and your computer's hardware.
 object Primes {
 
     private var i = 2L
